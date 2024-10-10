@@ -16,5 +16,5 @@ params = {
 
 answer = requests.post(url,json=data,params=params)
 
-print(answer.request.url)
-#print(answer.json())
+#print(answer.request.url)
+print(answer.json())
