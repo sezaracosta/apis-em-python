@@ -1,12 +1,18 @@
 from pprint import pprint
 import requests
 
-nome = 'rosario'
+nome = 'ryan'
 
 url = f"https://servicodados.ibge.gov.br/api/v2/censos/nomes/{nome}"
 
+params = {
+    'sexo':'M',
+    'groupBy':'UF',
+}
 
-resposta = requests.get(url)
+
+
+resposta = requests.get(url,params=params)
 
 try:
     resposta.raise_for_status()
